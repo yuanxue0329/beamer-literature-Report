@@ -1,0 +1,4 @@
+interface:
+  display_name: "LaTeX 文献汇报"
+  short_description: "沿用现有 Beamer 模板，以原文图片与精炼文字制作清晰易读的文献汇报"
+  default_prompt: "使用 $beamer-literature-review，完善现有 LaTeX 文献汇报，先检查图片尺寸、内容与白边，再调整布局。"
