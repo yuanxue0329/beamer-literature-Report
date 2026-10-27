@@ -82,6 +82,20 @@ Copy-Item -LiteralPath '.\skills\beamer-literature-review' -Destination $skillDe
 
 引用方式可在请求中指定。技能默认每篇论文在首次出现页列题名、出版情况和 DOI，后续页保留原图表号；当前用户或项目要求始终优先。
 
+### 按需调取 content-planning
+
+需要组织汇报内容时，可在同一个技能中调用 [content-planning](skills/beamer-literature-review/references/content-planning.md)：
+
+```text
+使用 $beamer-literature-review，调取 content-planning。
+结合论文原文与我的批注，按实际汇报需求整理叙述顺序、逐页论点和图表证据。
+保留原有 TeX 排版规则，先给出大纲。
+```
+
+该参考模块涵盖论文类型与叙述顺序、逐页内容蓝图、图表来源、术语一致性和内容复核。它不改变原有的模板、图片尺寸检查、裁切、缩放、分栏、偏移和引用规则；仅调整图片时无需重新运行内容策划。
+
+模块的工作方法借鉴 Nature Skills 的 `nature-paper2ppt` 与术语记录指南，固定版本和具体来源见模块末尾。它没有引入上游 PPTX 生成工具链，也无需另外安装 Nature Skills。
+
 ## 图片检查脚本
 
 仅在运行辅助脚本时需要 Python 和 Pillow。它只读取图片并输出 JSON，不会裁切或改写原图。
@@ -117,6 +131,7 @@ python -X utf8 skills/beamer-literature-review/scripts/inspect_images.py './imag
         ├── SKILL.md
         ├── agents/openai.yaml
         ├── references/
+        │   ├── content-planning.md
         │   ├── layout-recipes.md
         │   └── layout-case.md
         └── scripts/inspect_images.py

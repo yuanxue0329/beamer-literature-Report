@@ -14,6 +14,10 @@ description: "Create and refine LaTeX Beamer literature-review and research-repo
 - 若用户要求先看大纲，交付逐页标题、论点、图片与图注、实验数据来源和版式；用户授权实施后直接写入现有文件。
 - 项目提供 AGENTS.md 或文献说明时，按其入口读取所需上下文；不假设存在特定个人目录或研究方向。
 
+## 按需调用内容策划
+
+用户明确要求“调取 content-planning”，或任务涉及新报告大纲、跨论文叙述、逐页内容与证据整理时，读取 [content-planning.md](references/content-planning.md)。局部调整图片或版式时复用已有内容，不默认重做策划。该模块仅补充内容组织，不改变以下 TeX 排版、图片处理、引用与交付规则。
+
 ## 先看图片，再决定布局
 
 对准备使用的图片执行下面的判断，尤其是流程图、拼接图和结果表。
